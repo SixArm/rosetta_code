@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  </head>
+  <body>
+    
+    <script type="text/javascript">
+      
+      $(function() {
+          var params = {
+	      "my-query"
+          };
+	  
+          $.ajax({
+              url: "https://example.com/my-path?" + $.param(params),
+              beforeSend: function(xhrObj){
+                  // Request headers
+                  xhrObj.setRequestHeader("My-Header-Key","my-header-value");
+              },
+              type: "GET",
+              // Request body
+              data: "my-body-text",
+          })
+              .done(function(data) {
+		  alert("success");
+              })
+              .fail(function() {
+		  alert("error");
+              });
+      });
+      
+    </script>
+  </body>
+</html>
