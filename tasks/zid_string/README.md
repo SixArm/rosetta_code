@@ -1,19 +1,19 @@
-# Task: Zid secure random hexadecimal 32 character text
+# ZID string
 
-Zid stands for "Zen identifier":
+A ZID is a secure random number.
 
-  * A Zen identifier is a secure random number, represented as text, such as "692dff7b74575a61f2b375b1c7d824cf".
+A ZID is represented as a string, hexadecimal lowercase, such as "692dff7b74575a61f2b375b1c7d824cf".
 
-  * A Zen identifier is similar to a random UUID (Universally Unique Identifier).
+A ZID is similar to a UUID (Universally Unique Identifier).
 
-  * A Zen identifier can be better than a UUID because a Zen indentifier is often faster, easier, more secure, and more sharable.
+A ZID can be better than a UUID because a ZID is can be faster, easier, more secure, and more sharable.
 
-Zid specification:
+ZID specification:
 
   * Generate all bits using a secure random generator.
   * Generate as many bits as you like.
-  * Describe the Zid by appending the number of bits, for example Zid-128 means 128 bits.
-  * A Zid string representation is all hexadecimal, all lowercase, using digits 0-9 and lowercase a-f.
+  * Describe the ZID by appending the number of bits, for example ZID-128 means 128 bits.
+  * A ZID string representation is all hexadecimal, all lowercase, i.e. all using digits 0-9 and lowercase a-f.
 
 
 ## C with libsodium
